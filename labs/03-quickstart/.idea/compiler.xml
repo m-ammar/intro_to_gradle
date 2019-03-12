@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="03-quickstart.main" target="11" />
+      <module name="03-quickstart.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
