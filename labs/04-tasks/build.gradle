@@ -8,3 +8,20 @@
        Hint: http://www.gradle.org/docs/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:description
     7. Execute `gradle tasks` again.
 */
+import java.time.*
+
+task helloWorld {
+    description "Your friendly neighbourhood configuration"
+    doLast {
+        println "hello world"
+    }
+}
+
+task printDate {
+    description "Your friendly neighbourhood printDate"
+    group = 'Date/Time'
+    doLast {
+        println(new Date())
+        println LocalDate.now()
+    }
+}

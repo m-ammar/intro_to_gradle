@@ -15,7 +15,29 @@ task hello {
 }
 
 task date {
+    dependsOn 'hello', 'whatever'
     doLast {
         println new Date()
+    }
+}
+
+task whatever {
+    doLast {
+        println "Wassup"
+    }
+}
+
+task hi(type: Greeting) 
+
+task hola(type: Greeting) {
+    user = 'Dolly'
+}
+
+class Greeting extends DefaultTask {
+    String user = 'World'
+
+    @TaskAction
+    void sayHello() {
+        println "Hello, $user!"
     }
 }
